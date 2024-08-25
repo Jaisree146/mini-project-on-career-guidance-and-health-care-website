@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script>
+function calculate(){
+var wat=document.getElementById("water");
+var exer=document.getElementById("exercise");
+var bp=document.getElementById("bloodsugerlevel");
+document.getElementById('t1').innerHTML=wat.value;
+document.getElementById('t2').innerHTML=exer.value;
+document.getElementById('t3').innerHTML=bp.value;
+if((wat.value>2500) && (exer.value>30) && (bp.value<100)){
+document.getElementById('t4').innerHTML="good";
+}
+else if((wat.value>2500) && (exer.value>30) && ((bp.value>100)&&(bp.value<125))){
+document.getElementById('t4').innerHTML="You are at the starting stage of diabetes";
+}
+else if((wat.value>2500) && (exer.value>30) && (bp.value>125)){
+document.getElementById('t4').innerHTML="You have diabetes";
+}
+else if((wat.value<2500) && (exer.value>30) && (bp.value<100)){
+document.getElementById('t4').innerHTML="Drink sufficient water";
+}
+else if((wat.value>2500) && (exer.value<30) && ((bp.value>100)&&(bp.value<125))){
+document.getElementById('t4').innerHTML="exercise for minimum 30 mins and you You are at the starting stage of diabetes";
+}
+else if((wat.value>2500) && (exer.value<30) && (bp.value>125)){
+document.getElementById('t4').innerHTML="You have diabetes so exercise for minimum 30 mins";
+}
+else if((wat.value<2500) && (exer.value<30) && (bp.value>125)){
+document.getElementById('t4').innerHTML="Bad";
+}
+else if((wat.value<2500) && (exer.value>30) && (bp.value<100)){
+document.getElementById('t4').innerHTML="Drink sufficient water";
+}
+else if((wat.value=="") || (exer.value=="") || (bp.value=="")){
+document.getElementById('t4').innerHTML="Enter the details properly";
+}
+
+else{
+document.getElementById('t4').innerHTML="not good";
+}
+
+}
+</script>
+ <title>About us</title>
+<style>
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+  
+body { 
+    font-family: sans-serif; 
+    background-color: #0f172a; 
+    color: white; 
+} 
+  
+h1 { 
+    background-image: linear-gradient(to right, #0ea5e9, #10b981); 
+} 
+  
+h3 { 
+    background-image: linear-gradient(to right, #ec4899, #8b5cf6); 
+} 
+  
+h1, 
+h3 { 
+    color: transparent; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+} 
+  
+.app { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 650px; 
+    margin: 1rem auto; 
+    padding: 10px; 
+    gap: 20px; 
+} 
+  
+.inputs { 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px; 
+    height: fit-content; 
+} 
+  
+.inputs>div { 
+    height: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-direction: column; 
+} 
+  
+label { 
+    font-size: 0.9rem; 
+} 
+  
+input, 
+label { 
+    display: block; 
+} 
+  
+input { 
+    margin-top: 8px; 
+    margin-bottom: 5px; 
+    padding: 10px; 
+    font-size: large; 
+    background-color: #262626; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    width: 100%; 
+} 
+  
+input:focus-visible { 
+    outline: 2px solid #ec4899; 
+} 
+  
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+} 
+  
+button{ display: block; cursor: pointer; border: none; } 
+  
+#submit { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    background-image: linear-gradient(to right, #ec4899, #8b5cf6); 
+    font-size: 1.3rem; 
+    border-radius: 5px; 
+    color: white; 
+    font-weight: bold; 
+    transition: scale 0.3s ease-in-out; 
+} 
+  
+#editSection{ 
+    width: 100%; 
+    display: flex; 
+    gap: 25px; 
+    justify-content: space-between; 
+} 
+  
+#editSection > button { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    font-size: 1.3rem; 
+    border-radius: 5px; 
+    color: white; 
+    font-weight: bold; 
+    transition: scale 0.3s ease-in-out; 
+} 
+  
+#submit:hover, #updateEntry:hover, #cancelEdit:hover { scale: 1.02; } 
+  
+.hidden{ display: none !important; } 
+  
+.edit, .delete{ 
+    margin: 0 auto; 
+    padding: 5px 10px; 
+    font-size: 1.1rem; 
+    border-radius: 5px; 
+    background-color: transparent; 
+    color: white; 
+    border: 1px solid white; 
+} 
+  
+.edit:hover, .delete:hover{ 
+    background-color: #0a0a0a; 
+} 
+  
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    position: relative; 
+    overflow: hidden; 
+} 
+  
+th, 
+td { 
+    text-align: center; 
+    padding: 10px; 
+    border: 0; 
+} 
+tr:nth-child(even) { 
+    background-color: #57534e; 
+} 
+  
+tr:nth-child(odd) { 
+    background-color: white; 
+} 
+  
+th { 
+    font-size: 0.9rem; 
+    background-color: #0a0a0a; 
+} 
+  
+tbody > tr:hover{ 
+    background-color: #ffebcd; 
+    color: black; 
+} 
+  
+.delete-animation{ 
+    background-color: #ef4444 !important; 
+    animation: deleteAnimate 0.4s linear forwards; 
+} 
+  
+@keyframes deleteAnimate{ 
+    to{ 
+        transform: translateX(100%); 
+    } 
+}
+</style></head>
+<body> 
+    <div class="app"> 
+        <h1>Health Tracker</h1> 
+        <div class="inputs"> 
+            <div> 
+                <label for="water"> 
+                      Water Intake (in ml) 
+                  </label> 
+                <input id="water" type="number"> 
+            </div> 
+            <div> 
+                <label for="exercise"> 
+                      Exercise Duration (in min) 
+                  </label> 
+                <input id="exercise" type="number"> 
+            </div> 
+            <div> 
+                <label for="bloodsugerlevel"> 
+                      Blood Sugar Level (in mg/dL) 
+                  </label> 
+                <input id="bloodsugerlevel" type="number"> 
+            </div> 
+        </div> 
+        <button id="submit"onclick="calculate()">Submit</button> 
+        <div id="editSection" class="hidden"> 
+               </div> 
+        <table> 
+            <thead> 
+                <tr> 
+                    <th>Date</th> 
+      
+                    <th>Exercise Duration <br> (in min)</th> 
+                    <th>Blood Sugar Level <br> (in mg/dL)</th> 
+                    <th><p>Result</p></th> 
+      
+                </tr> 
+          <tr style="background-color:lightgrey;color:black"> 
+                    <td id="t1"></td>
+                    <td id="t2"></td> 
+                    <td id="t3"></td> 
+                    <td id="t4"></td> 
+      
+                </tr> 
+            </thead> 
+             <tbody> 
+            </tbody> 
+        </table> 
+<br><br>
+<h1><center>WAYS TO BE HEALTHY</CENTER></h1>
+<h2><center>Water level-Drink more than 2500ml of water</CENTER></h2>
+<h2><center>Exercise for minimum 30mins</CENTER></h2>
+<h2><center>m=Maintain less than 100mg of blood sugar levels</CENTER></h2>
+
+    </div> 
+    <!-- Font Awesome JS CDN -->
+  </body> 
+  
+</html>
+

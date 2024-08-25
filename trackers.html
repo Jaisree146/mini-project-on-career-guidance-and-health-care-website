@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+     background-image: linear-gradient(red, yellow, lightgreen);
+      background-size:2000px 2000px;
+      background-repeat:no-repeat;            
+  }
+
+.main{
+         
+          display:flex;
+          flex-wrap:wrap;
+          gap:25px;
+          justify-content:center;
+          align-items:center;
+          min-height:100vh;
+          margin-top:-50px;
+          BORDER-RADIUS:20PX;
+}
+.container{
+width:400px;
+PADDING:20PX;
+
+ }
+.flip-box {
+  background-color: transparent;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color:black;
+  color: black;
+}
+.btn{
+background-color:dodgerblue;
+color:black;
+width:70px;
+height:50px;
+border-radius:3px;
+}
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}</style>
+<body>
+<div class="main">
+<div class="container">
+ <div class="flip-box">
+ <div class="flip-box-inner">
+ <div class="flip-box-front">
+
+<br><br><br><br><br>
+<img width="340" src="bmi.png">
+</div>
+ <div class="flip-box-back">
+ <BR><BR><h3>A BMI calculator estimates body fat based on height and weight. It can be a tool to get a general idea of whether your weight is in a healthy range for your height.</h3><br><br><button class="btn"><a style="text-decoration:none;color:white;" href="bmi.html"><b></strong>Click Here</b></strong></a></button><br>
+ 
+ </DIV>
+ </DIV>
+ </div>
+</DIV>
+
+<div class="container">
+
+<div class="flip-box">
+ <div class="flip-box-inner">
+ <div class="flip-box-front">
+ <br><br><br><br><br>
+
+<img width="340" src="health.png">
+</div>
+ <div class="flip-box-back">
+ <h3 style="color:black;"><br>Health tracker can be used to review your healthiness in terms of water level,blood sugar level and exercising hours and assess your performance</h3><br><br>
+<button class="btn"><a style="text-decoration:none;color:white;" href="track.html"><b></strong>Click Here</b></strong></a></button><br>
+ </DIV>
+ </div>
+</div>
+</DIV>
+<div class="container">
+
+ <div class="flip-box">
+ <div class="flip-box-inner">
+ <div class="flip-box-front">
+<br><br><br><br><br>
+
+<img width="340" src="food.png">
+</div>
+ <div class="flip-box-back">
+ <BR><BR><h3>Nutrients are the building blocks of a healthy body. They provide energy, allow your body to grow and repair itself, and help keep your systems functioning smoothly</h3><br><br><button class="btn"><a style="text-decoration:none;color:white;" href="diet.html"><b></strong>Click Here</b></strong></a></button><br>
+ 
+ </DIV>
+</div>
+ </DIV>
+</DIV>
+</div>
+</body>
+</html>

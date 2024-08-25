@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <style>
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#review-section,#comment-section{
+    border-top: 2px solid #007bff;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+#review-section label,#comment-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#review-section textarea,#review-section input[type="text"],#review-section input[type="number"], #comment-section textarea,#comment-section input[type="text"],#comment-section input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#review-section button, #comment-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#review-section button:hover, #comment-section button:hover {
+    background-color: #0056b3;
+}
+
+#comment-section .comment {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#comment-section .comment:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+#comment-section .comment strong {
+    color: #007bff;
+}
+
+#comment-section .comment p {
+    margin: 5px 0;
+    font-size: 16px;
+}</style>
+<script>
+function postComment() {
+    // Get input values
+    const name = document.getElementById("name").value;
+    const commentText = document.getElementById("comment").value;
+
+    // Create comment element
+    const commentElement = document.createElement("li");
+    commentElement.className = "comment";
+    commentElement.innerHTML = `<strong>${name}:</strong><p>${commentText}</p>`;
+
+    // Append comment to comment list
+    document.getElementById("comments-list").appendChild(commentElement);
+
+    // Clear input fields
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+}
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Website Review</h1>
+        <div id="review-section">
+            <h2>Leave a Comment</h2>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="comment">Comment:</label>
+                <textarea id="comment"></textarea>
+            </div>
+            <button onclick="postComment()">Post Comment</button>
+        </div>
+        <!-- Comment section -->
+        <div id="comment-section">
+            <h2>Comments</h2>
+            <ul id="comments-list">
+                           </ul>
+        </div>
+    </div>
+</body>
+</html>

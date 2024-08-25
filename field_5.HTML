@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>fields</title>
+<style>
+body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+      
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+</style></head><body>
+<div class="container">
+  <h2>Science</h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Role</div>
+      <div class="col col-2">Course Name</div>
+      <div class="col col-3">Best College</div>
+      <div class="col col-4">Stream</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Job Id">Physicist</div>
+      <div class="col col-2" data-label="Customer Name">B.Sc.Physics</div>
+      <div class="col col-3" data-label="Amount">Madras Veterinary College,Chennai</div>
+      <div class="col col-4" data-label="Payment Status">Class 12 with biology</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Job Id">Chemist</div>
+      <div class="col col-2" data-label="Customer Name">B.Sc.Chemistry</div>
+      <div class="col col-3" data-label="Amount">Govt.Siddha Medical College,Tirunelveli</div>
+      <div class="col col-4" data-label="Payment Status">Class 12 with biology</div>
+    </li>
+<li class="table-row">
+      <div class="col col-1" data-label="Job Id">Neuro Scientist</div>
+      <div class="col col-2" data-label="Customer Name">BHMS</div>
+      <div class="col col-3" data-label="Amount">Sri Venkat Homeopathic<br> Medical college,Chennai</div>
+      <div class="col col-4" data-label="Payment Status">Class 12 with biology</div>
+    </li>
+<li class="table-row">
+      <div class="col col-1" data-label="Job Id">Cartographer</div>
+      <div class="col col-2" data-label="Customer Name">BDS</div>
+      <div class="col col-3" data-label="Amount">SRM Institute of science and tech,Chennai</div>
+      <div class="col col-4" data-label="Payment Status">Class 12 with biology</div>
+    </li>
+<li class="table-row">
+      <div class="col col-1" data-label="Job Id">Geologist</div>
+      <div class="col col-2" data-label="Customer Name">BAMS</div>
+      <div class="col col-3" data-label="Amount">Sri Sairam AYURVEDIC medical College,Chennai</div>
+      <div class="col col-4" data-label="Payment Status">Class 12 with biology</div>
+    </li>
+<li class="table-row">
+      <div class="col col-1" data-label="Job Id">Bacteriologist</div>
+      <div class="col col-2" data-label="Customer Name">(B.Vsc)Bachelors in Vertinary Science</div>
+      <div class="col col-3" data-label="Amount">Madras Veterinary College,Chennai</div>
+      <div class="col col-4" data-label="Payment Status">Class 12 with biology</div>
+    </li>
+
+  </ul>
+</div>

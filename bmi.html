@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <style>
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.form{
+width:500px;
+height:540px;
+background:linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+position:absolute;
+top:050px;
+left:490px;
+padding:35px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+/* @codewithcurious.com */
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+height:400px;
+}
+
+h1 {
+  color: #333;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+</style>
+<script>
+function calculateBMI() {
+  var heightInput = document.getElementById("height");
+  var weightInput = document.getElementById("weight");
+  var resultDiv = document.getElementById("result");
+
+  var height = parseFloat(heightInput.value);
+  var weight = parseFloat(weightInput.value);
+
+  if (isNaN(height) || isNaN(weight)) {
+    resultDiv.innerHTML = "Please enter valid height and weight.";
+    return;
+  }
+
+  var bmi = weight / ((height / 100) ** 2);
+  var category = "";
+
+  if (bmi < 18.5) {
+    category = "Underweight";
+  } else if (bmi < 25) {
+    category = "Normal weight";
+  } else if (bmi < 30) {
+    category = "Overweight";
+  } else {
+    category = "Obese";
+  }
+
+  resultDiv.innerHTML = "Your BMI is " + bmi.toFixed(2) + " (" + category + ")";
+}
+//@codewithcurious.com
+
+function calculateBMI() {
+  var heightInput = document.getElementById("height");
+  var weightInput = document.getElementById("weight");
+  var resultDiv = document.getElementById("result");
+
+  var height = parseFloat(heightInput.value);
+  var weight = parseFloat(weightInput.value);
+
+  if (isNaN(height) || isNaN(weight)) {
+    resultDiv.innerHTML = "Please enter valid height and weight.";
+    return;
+  }
+
+  var bmi = weight / ((height / 100) ** 2);
+  var category = "";
+
+  if (bmi < 18.5) {
+    category = "Underweight";
+  } else if (bmi < 25) {
+    category = "Normal weight";
+  } else if (bmi < 30) {
+    category = "Overweight";
+  } else {
+    category = "Obese";
+  }
+
+  resultDiv.innerHTML = "Your BMI is " + bmi.toFixed(2) + " (" + category + ")";
+}
+</script>
+</head>
+<body>
+<div class="form">
+  <div class="container">
+    <h1>BMI Calculator</h1><br><br>
+    <div class="input-container">
+      <label for="height" style="font-weight:bold;font-size:150%;">Height:</label><br>
+      <input type="number" id="height" placeholder="Height(cm)">
+    </div>
+    <div class="input-container"><br>
+      <label for="weight" style="font-weight:bold;font-size:150%;">Weight:</label><br>
+      <input type="number" id="weight" placeholder="Weight (kg)">
+    </div>
+   <br> <button onclick="calculateBMI()">Calculate</button>
+    <div id="result"></div>
+  </div>
+
+</body>
+</html>

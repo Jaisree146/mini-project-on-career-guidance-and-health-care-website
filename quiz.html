@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Your Career Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 1.2em;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Pick Your Career Quiz</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <label for="q1">What type of work environment do you prefer?</label>
+            <select id="q1" name="q1" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Team-oriented</option>
+                <option value="Data Scientist">Independent</option>
+                <option value="Marketing Manager">Analytical</option>
+                <option value="Graphic Designer">Creative</option>
+                <option value="Social Worker">Helping others</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 2 -->
+        <div class="question">
+            <label for="q2">What are your strengths?</label>
+            <select id="q2" name="q2" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Problem-solving</option>
+                <option value="Data Scientist">Leadership</option>
+                <option value="Marketing Manager">Attention to detail</option>
+                <option value="Graphic Designer">Imagination</option>
+                <option value="Social Worker">Empathy</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 3 -->
+        <div class="question">
+            <label for="q3">What subjects or activities do you enjoy the most?</label>
+            <select id="q3" name="q3" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Business</option>
+                <option value="Data Scientist">Technology</option>
+                <option value="Marketing Manager">Mathematics</option>
+                <option value="Graphic Designer">Art</option>
+                <option value="Social Worker">Humanities</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 4 -->
+        <div class="question">
+            <label for="q4">What motivates you?</label>
+            <select id="q4" name="q4" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Success</option>
+                <option value="Data Scientist">Freedom</option>
+                <option value="Marketing Manager">Discovery</option>
+                <option value="Graphic Designer">Expression</option>
+                <option value="Social Worker">Impact</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 5 -->
+        <div class="question">
+            <label for="q5">How do you handle stress?</label>
+            <select id="q5" name="q5" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Meditation or Yoga</option>
+                <option value="Data Scientist">Exercise</option>
+                <option value="Marketing Manager">Talking to someone</option>
+                <option value="Graphic Designer">Organizing tasks</option>
+                <option value="Social Worker">Ignore it and keep working</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 6 -->
+        <div class="question">
+            <label for="q6">How do you prefer to learn new skills?</label>
+            <select id="q6" name="q6" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Taking classes</option>
+                <option value="Data Scientist">Self-study</option>
+                <option value="Marketing Manager">Practice and trial-error</option>
+                <option value="Graphic Designer">Having a mentor</option>
+                <option value="Social Worker">Online courses</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 7 -->
+        <div class="question">
+            <label for="q7">How important is work-life balance for you?</label>
+            <select id="q7" name="q7" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Critical, I need it to be happy</option>
+                <option value="Data Scientist">Important, but not the top priority</option>
+                <option value="Marketing Manager">Flexible, I can adapt</option>
+                <option value="Graphic Designer">Work is my life</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 8 -->
+        <div class="question">
+            <label for="q8">How do you handle criticism?</label>
+            <select id="q8" name="q8" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Reflect on it and learn from it</option>
+                <option value="Data Scientist">Defend myself and my work</option>
+                <option value="Marketing Manager">Ignore it, it doesn't affect me</option>
+                <option value="Graphic Designer">Get upset and stressed</option>
+                <option value="Social Worker">Change my approach</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 9 -->
+        <div class="question">
+            <label for="q9">What is your preferred communication style?</label>
+            <select id="q9" name="q9" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">Direct and straightforward</option>
+                <option value="Data Scientist">Diplomatic and tactful</option>
+                <option value="Marketing Manager">Friendly and informal</option>
+                <option value="Graphic Designer">Listening and empathetic</option>
+                <option value="Social Worker">Visual and graphical</option>
+            </select>
+        </div>
+        <!-- Add more questions here -->
+        <!-- Example Question 10 -->
+        <div class="question">
+            <label for="q10">What do you value most in a job?</label>
+            <select id="q10" name="q10" required>
+                <option value="">Select One</option>
+                <option value="Software Developer">High salary</option>
+                <option value="Data Scientist">Flexibility</option>
+                <option value="Marketing Manager">Opportunities for growth</option>
+                <option value="Graphic Designer">Making a positive impact</option>
+                <option value="Social Worker">Creative freedom</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result" style="display: none;"></div>
+</div>
+<script>
+    document.getElementById('quiz-form').addEventListener('submit', function(event){
+        event.preventDefault();
+
+        const q1 = document.getElementById('q1').value;
+        const q2 = document.getElementById('q2').value;
+        const q3 = document.getElementById('q3').value;
+        const q4 = document.getElementById('q4').value;
+        const q5 = document.getElementById('q5').value;
+        const q6 = document.getElementById('q6').value;
+        const q7 = document.getElementById('q7').value;
+        const q8 = document.getElementById('q8').value;
+        const q9 = document.getElementById('q9').value;
+        const q10 = document.getElementById('q10').value;
+
+        if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10){
+            alert('Please answer all questions!');
+            return; // Added return statement to prevent further execution
+        }
+
+        const careerPaths = {
+            "Software Developer": 0,
+            "Data Scientist": 0,
+            "Marketing Manager": 0,
+            "Graphic Designer": 0,
+            "Social Worker": 0,
+            "Entrepreneur": 0,
+            "Teacher": 0,
+            "Engineer": 0,
+            "Psychologist": 0,
+            "Chef": 0
+        };
+
+        careerPaths[q1]++;
+        careerPaths[q2]++;
+        careerPaths[q3]++;
+        careerPaths[q4]++;
+        careerPaths[q5]++;
+        careerPaths[q6]++;
+        careerPaths[q7]++;
+        careerPaths[q8]++;
+        careerPaths[q9]++;
+        careerPaths[q10]++;
+
+        let maxScore = 0;
+        let suggestedCareer = '';
+
+        for (const careerPath in careerPaths){
+            if (careerPaths[careerPath] > maxScore){
+                maxScore = careerPaths[careerPath];
+                suggestedCareer = careerPath;
+            }
+        }
+
+        const resultContainer = document.getElementById('result');
+        resultContainer.textContent = `Based on your answers, your suggested career path is: ${suggestedCareer}`; // Corrected the template string syntax
+        resultContainer.style.display = 'block';
+    });
+</script>
+</body>
+</html>

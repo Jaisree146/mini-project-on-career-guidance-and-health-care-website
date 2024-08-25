@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+    <style>
+     body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color:#ffebcd;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chat-box {
+    height: 450px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#user-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+
+#send-btn {
+    width: 70px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}
+</style><script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sendBtn = document.getElementById('send-btn');
+    const userInput = document.getElementById('user-input');
+    const chatBox = document.getElementById('chat-box');
+
+    sendBtn.addEventListener('click', function() {
+        const message = userInput.value.trim();
+        if (message !== '') {
+            appendMessage('You:', message);
+            userInput.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    });
+
+    function appendMessage(username, message) {
+        const chatMessage = document.createElement('div');
+        chatMessage.classList.add('chat-message');
+        chatMessage.innerHTML = `<span class="username">${username}</span><span class="message">${message}</span>`;
+        chatBox.appendChild(chatMessage);
+    }
+});
+</script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="chat-message">
+                <span class="username">Admin:</span>
+                <span class="message">Hello!We are here to guide you...you can ask any questions to us...We will answer your questions in the FAQ page.</span>
+            </div>
+            <div class="chat-message">
+                <span class="username">User1:</span>
+                <span class="message">Which is the best college for Engineering?</span>
+            </div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button id="send-btn">Send</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
